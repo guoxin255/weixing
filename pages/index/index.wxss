@@ -1,9 +1,16 @@
-.nav {
-  background-color: #f0f0f0;
+.item {
+  background-color: #eb4450;
   display: flex;
-  padding: 5rpx;
+  justify-content: center;
+  width: 750rpx;
+  height: 100rpx;
 }
-.item{
-  flex: 1;
-  text-align:center;
+input {
+  width: 700rpx;
+  height: 81rpx;
+  text-align: center;
+  background-color: #ffffff;
+  color: #767676;
+  border-radius: 6rpx;
 }
+

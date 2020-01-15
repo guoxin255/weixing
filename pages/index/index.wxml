@@ -1,5 +1,8 @@
-<view class="nav">
-  <view class="item">项目</view>
-  <view class="item">文件</view>
-  <view class="item">编辑</view>
+<!-- 搜索栏 -->
+<view class="item">
+<input type="text" value="搜索">
+</input></view>
+<!-- 轮播图 -->
+<view class="item1"> 
+ <image class="img" src="/imgs/黑马优购.jpg"></image>
 </view>
