@@ -1,8 +1,23 @@
-<!-- 搜索栏 -->
-<view class="item">
-<input type="text" value="搜索">
-</input></view>
+<!-- 搜索框 -->
+<search-Input tabItems="{{tabs}}" bindmytap="onMyTap"/>
 <!-- 轮播图 -->
-<view class="item1"> 
- <image class="img" src="/imgs/黑马优购.jpg"></image>
+<view class="index_swiper">
+<swiper indicator-dots="true" autoplay="true" circular="true" class="swiper1">
+ <swiper-item wx:for='{{swiper_list}}' wx:key='good_id'>
+   <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+   <image src="{{item.image_src}}" mode="widthFix"></image>
+   </navigator>
+  </swiper-item>
+</swiper>
+</view>
+
+<!-- 导航栏 -->
+<view class="nav">
+<navigator wx:for="{{navs}}" wx:key="name" url="/pages/category/index" open-type="switchTab">
+<image mode="widthFix" src="{{item.image_src}}"></image>
+</navigator>
+</view>
+<!-- 时尚女装 -->
+<view class="fashion">
+<image src="https://api.zbztb.cn/pyg/pic_floor01_title.png"></image>
 </view>

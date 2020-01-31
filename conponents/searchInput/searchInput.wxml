@@ -1,0 +1,4 @@
+<!-- 搜索栏 -->
+<view class="item">
+<input type="text" placeholder="{{tabItems}}" >
+</input></view>
