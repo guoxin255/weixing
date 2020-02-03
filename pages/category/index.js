@@ -1,47 +1,19 @@
-//index.js
-//获取应用实例
-const app = getApp()
+// pages/category/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    navs: [],
-    swiper_list:[],
-    tabs:"搜索",
-    onMyTab(e){
-      console.log(e.detail)
-    },
-
-
+    iconSize:[20,30,40,50,60,70,90],
+    iconType:['success','success_no_circle','info','warn','waiting','cancel','download','search','clear']
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     wx.request({
-       url:'https://api.zbztb.cn/api/public/v1/home/swiperdata',
-       success:(res=>{
-         this.setData({
-           swiper_list:res.data.message
-         })
-         console.log(res);
-         
-       })
-     }),
-     wx.request({
-       url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
-         success: (res => {
-           this.setData({
-             navs:res.data.message
-           })
-           console.log(res);
 
-         })
-        
-       })
   },
 
   /**

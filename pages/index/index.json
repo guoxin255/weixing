@@ -1,5 +1,10 @@
+
 {
-  "usingComponents": {
-    "search-Input":"/conponents/searchInput/searchInput"
-  }
+  "usingComponents":{
+    "SearchInput":"/components/searchInput/searchInput"
+  },
+"backgroundTextStyle": "light",
+"navigationBarBackgroundColor": "#eb4450",
+"navigationBarTitleText": "黑马优购",   
+"navigationBarTextStyle": "white"
 }

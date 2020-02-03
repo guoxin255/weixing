@@ -1,5 +1,5 @@
 <!-- 搜索框 -->
-<search-Input tabItems="{{tabs}}" bindmytap="onMyTap"/>
+<SearchInput tabItems="{{tabs}}" bindmytap="onMyTap"/>
 <!-- 轮播图 -->
 <view class="index_swiper">
 <swiper indicator-dots="true" autoplay="true" circular="true" class="swiper1">
@@ -13,7 +13,7 @@
 
 <!-- 导航栏 -->
 <view class="nav">
-<navigator wx:for="{{navs}}" wx:key="name" url="/pages/category/index" open-type="switchTab">
+<navigator wx:for="{{navs}}" wx:key="name" url="#" open-type="switchTab">
 <image mode="widthFix" src="{{item.image_src}}"></image>
 </navigator>
 </view>
