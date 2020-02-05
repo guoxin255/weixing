@@ -10,6 +10,7 @@ Page({
     navs: [],
     swiper_list:[],
     tabs:"搜索",
+    floors:[],
     onMyTab(e){
       console.log(e.detail)
     },
@@ -21,27 +22,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     wx.request({
-       url:'https://api.zbztb.cn/api/public/v1/home/swiperdata',
-       success:(res=>{
-         this.setData({
-           swiper_list:res.data.message
-         })
-         console.log(res);
-         
-       })
-     }),
-     wx.request({
-       url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
-         success: (res => {
-           this.setData({
-             navs:res.data.message
-           })
-           console.log(res);
+    wx.request({
+      url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
+      success: (res => {
+        this.setData({
+          swiper_list: res.data.message
+        })
+        console.log(res);
 
-         })
-        
-       })
+      })
+    }),
+      wx.request({
+        url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
+        success: (res => {
+          this.setData({
+            navs: res.data.message
+          })
+          console.log(res);
+        })
+      }),
+      wx.request({
+      url: 'https://api.zbztb.cn/api/public/v1/home/floordata',
+        success: (res => {
+          this.setData({
+            floors: res.data.message
+          })
+          console.log(res);
+        })
+      })
   },
 
   /**
