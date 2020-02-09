@@ -1,4 +1,7 @@
 <!-- 搜索栏 -->
 <view class="item">
-<input type="text" placeholder="{{tabItems}}" >
-</input></view>
+  <navigator url="/pages/search/index" open-type="navigate">
+    <input type="text" placeholder="{{tabItems}}">
+    </input>
+  </navigator>
+</view>

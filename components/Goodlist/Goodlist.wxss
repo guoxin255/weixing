@@ -1,0 +1,27 @@
+.good_list_item {
+  font-size: 24rpx;
+  color: #434343;
+  display: flex;
+  width: 698rpx;
+  height: 209rpx;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+  margin-top: 15rpx ;
+}
+.good_list_item .productLeft {
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+.good_list_item .productLeft image {
+  width: 191rpx;
+  height: 191rpx;
+}
+.good_list_item .productRight {
+  width: 464rpx;
+  height: 66rpx;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

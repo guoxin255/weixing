@@ -1,0 +1,12 @@
+<view class="search_center">
+  <!-- 左边内容 -->
+  <view class="search_left">
+    <icon type="search"></icon>
+    <input placeholder="搜索商品" bindinput="handleInputchange" value="{{inputval}}"></input>
+  </view>
+  <!-- 右边内容 -->
+  <view class="search_btn" bindtap="hangdleClick">搜索</view>
+</view>
+<!-- 搜索的内容 -->
+<goodList good_List="{{good_List}}" />
+

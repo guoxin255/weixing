@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goodList": "/components/Goodlist/Goodlist"
+  },
+    "navigationBarTitleText": "搜索中心"
+}

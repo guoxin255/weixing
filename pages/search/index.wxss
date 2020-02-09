@@ -1,0 +1,27 @@
+.search_center {
+  margin-left: 15rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 15rpx;
+}
+.search_center .search_left {
+  width: 599rpx;
+  height: 61rpx;
+  display: flex;
+  background-color: #e7e7e7;
+  border-radius: 64rpx;
+  align-items: center;
+  margin-right: 18rpx;
+}
+.search_center .search_left icon {
+  margin-left: 10rpx;
+}
+.search_center .search_btn {
+  width: 101rpx;
+  height: 61rpx;
+  background-color: #ea4350;
+  border-radius: 5rpx;
+  line-height: 61rpx;
+  text-align: center;
+  color: #fff;
+}

@@ -1,4 +1,6 @@
 //index.js
+
+import {request} from "../../request/request.js";
 //获取应用实例
 const app = getApp()
 Page({
@@ -22,34 +24,45 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
-      success: (res => {
-        this.setData({
-          swiper_list: res.data.message
-        })
-        console.log(res);
-
-      })
-    }),
-      wx.request({
-        url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
-        success: (res => {
-          this.setData({
-            navs: res.data.message
-          })
-          console.log(res);
-        })
-      }),
-      wx.request({
-      url: 'https://api.zbztb.cn/api/public/v1/home/floordata',
-        success: (res => {
-          this.setData({
-            floors: res.data.message
-          })
-          console.log(res);
-        })
-      })
+    this.getSwiperlist(),
+    this.getCatitemslist(),
+    this.getFloorlist()
+      // wx.request({
+      // url: 'https://api.zbztb.cn/api/public/v1/home/floordata',
+      //   success: (res => {
+      //     this.setData({
+      //       floors: res.data.message
+      //     })
+      //     console.log(res);
+      //   })
+      // })
+  },
+  // 轮播图数据
+  getSwiperlist:async function(e){
+     const swiper_list=await request ({
+       url:"home/swiperdata"
+     });
+    this.setData({
+       swiper_list
+     })
+  },
+  // 分类导航数据
+   getCatitemslist: async function (e) {
+     const navs = await request({
+       url: "home/catitems"
+    });
+    this.setData({
+      navs
+    })
+  },
+  // 楼层数据
+  getFloorlist: async function (e) {
+    const floors = await request({
+      url: "home/floordata"
+    });
+    this.setData({
+      floors
+    })
   },
 
   /**

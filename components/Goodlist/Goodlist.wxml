@@ -1,0 +1,10 @@
+<!-- 搜索内容 -->
+<view class="product_Content">
+  <block wx:for="{{good_List}}" wx:key="index">
+    <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" open-type="navigate" class="good_list_item">
+      <view class="productLeft">
+      <image src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2086628419,3654878088&fm=26&gp=0.jpg"></image></view>
+      <view class="productRight">{{item.goods_name}}</view>
+    </navigator>
+  </block>
+</view>
